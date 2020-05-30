@@ -11,11 +11,11 @@ export class PanelTopComponent implements OnInit {
 
   ngOnInit(): void {
   }
-getCartQuanity(){
-  let quanity = 0;
-  for(const product of this.mainService.cart){
-    quanity += 1;
+  getCartQuanity() {
+    let quantity = 0;
+    for (const product of this.mainService.cart) {
+      quantity += 1;
+    }
+    return quantity;
   }
-  return quanity;
-}
 }

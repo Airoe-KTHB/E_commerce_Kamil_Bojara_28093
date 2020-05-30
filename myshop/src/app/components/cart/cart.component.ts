@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { MainService } from 'src/app/services/main.service';
+
 @Component({
   selector: 'app-cart',
   templateUrl: './cart.component.html',
@@ -12,11 +13,13 @@ export class CartComponent implements OnInit {
 
   ngOnInit(): void {
   }
-getCartPrice() {
-  let price = 0;
-  for(const object of this.mainService.cart) {
-    price += parseFloat(object.product.price);
+
+  getCartPrice() {
+    let price = 0;
+    for (const object of this.mainService.cart) {
+      price += parseFloat(object.product.price);
+    }
+    return price;
   }
-  return price;
-}
+
 }
